@@ -1,6 +1,5 @@
 # matlab_load_forecast
     这个文档用于记录与matlab负荷预测算法相关的一些函数的使用和预测的过程
-   
 ```
 [num,txt,raw] = xlsread('myExample.xlsx');
 ```
@@ -11,6 +10,6 @@
 ```
 导入数据之后要输入神经网络之前应该先通过矩阵变形将输入变成行输入
 ```
-【r,c】=size(data_weather2010_2014);
+r,c] = size(data_weather2010_2014);
 ```
     size函数用于测量矩阵的行数和列数
