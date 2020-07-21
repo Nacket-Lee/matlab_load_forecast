@@ -15,6 +15,6 @@
 ```
     size函数用于测量矩阵的行数和列数
 ```
-    mae(mean absolute error)：平均绝对误差
-    mape(mean absolute percent error):平均绝对百分比误差
+mae(mean absolute error)：平均绝对误差
+mape(mean absolute percent error):平均绝对百分比误差
 ```
