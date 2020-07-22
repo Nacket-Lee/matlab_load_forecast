@@ -44,7 +44,7 @@ init(net);       %初始化网络
     out2(:,:,time1) = sim(net,inputs2);       %用训练好的网络仿真inputs2
     mape2(:,:,time1) = mean(abs(out2(:,:,time1) - targets2 ./ targets2));
     mape1(:,:,time1) = mean(abs(out1(:,:,time1) - targets1) ./ targets1);
-    %求取仿真输出值和真实值targets2的平均绝对百分比误差
+    %求取仿真输出值和负荷真实值targets2的平均绝对百分比误差
 
 end
 ```
