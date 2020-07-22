@@ -18,3 +18,32 @@
 mae(mean absolute error)：平均绝对误差
 mape(mean absolute percent error):平均绝对百分比误差
 ```
+```
+for time1=1:6%--------------------------------------------------------
+hiddenSizes = 6;
+trainFcn = 'trainlm';
+
+net = feedforwardnet(hiddenSizes,trainFcn);
+
+net.divideParam.trainRatio = 70/100;
+net.divideParam.valRatio = 15/100;
+net.divideParam.testRatio = 15/100;
+
+net.trainParam.epochs = 1500;
+net.trainParam.goal = 0.1;
+net.trainParam.max_fail = 20;
+net.trainParam.mu_max = 10;
+%----------------------------------------------
+init(net);
+[net,tr] = train(net,inputs1,targets1);
+
+%-----------------------------------------------
+
+    out1(:,:,time1) = sim(net,inputs1);
+    out2(:,:,time1) = sim(net,inputs2);
+    mape2(:,:,time1) = mean(abs(out2(:,:,time1) - targets2 ./ targets2));
+    mape1(:,:,time1) = mean(abs(out1(:,:,time1) - targets1) ./ targets1);
+
+
+end
+```
